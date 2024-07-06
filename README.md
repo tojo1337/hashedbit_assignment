@@ -1,0 +1,1 @@
+Hashedbit Assignments
