@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo">
+        <div>Initial string : </div>
+        <div id="initStr">I love my India</div>
+        <div>Final string is : </div>
+        <div id="finalStr"></div>
+    </div>
+    <script>
+        function reverse(data){
+            let sample = data.toString();
+            let reverse = sample.split(" ").reverse().join(" ");
+            return reverse;
+        }
+        let initStr = document.getElementById("initStr").innerHTML;
+        let revStr = reverse(initStr);
+        document.getElementById("finalStr").innerHTML = revStr;
+    </script>
+</body>
+</html>

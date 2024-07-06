@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Enter the word : 
+        <input type="text" id="input">
+    </form>
+    <button onclick="submit()">submit</button>
+    <div>Output : </div>
+    <div id="output"></div>
+    <script>
+        function submit(){
+            let item = document.getElementById("input").value;
+            let rev = item.toString().split("").reverse().join("");
+            document.getElementById("output").innerHTML = rev;
+        }
+    </script>
+</body>
+</html>

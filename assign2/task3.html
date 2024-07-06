@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter your salary : </label>
+        <input type="text" id="input">
+    </form>
+    <button onclick="findTax()">submit</button>
+    <div>
+        Tax amount is : <div id="tax"></div>
+    </div>
+    <script>
+        function findTax(){
+            let sal = Number(document.getElementById("input").value)
+            if(sal>0 && sal<=500000){
+                document.getElementById("tax").innerHTML = 0;
+            }else if(sal>500000 && sal<=1000000){
+                let res = sal*(10/100)
+                document.getElementById("tax").innerHTML = res;
+            }else if(sal>1000000 && sal<=1500000){
+                let res = sal*(20/100);
+                document.getElementById("tax").innerHTML = res;
+            }else if(sal>1500000){
+                let res = sal*(30/100);
+                document.getElementById("tax").innerHTML = res;
+            }
+        }
+    </script>
+</body>
+</html>

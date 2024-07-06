@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            { name: "Ram", scores: [80, 70, 60] },
+            { name: "Mohan", scores: [80, 70, 90] },
+            { name: "Sai", scores: [60, 70, 80] },
+            { name: "Hemang", scores: [90, 90, 80, 80] },
+        ];
+        const output = students.map(item=>{
+            let name = item.name;
+            let num = item.scores.length;
+            let score = 0;
+            for(score of item.scores){
+                score += score;
+            }
+            let avg = score/num;
+            return {
+                name: item.name,
+                average: avg
+            }
+        });
+        console.log("Input array : ");
+        console.log(students);
+        console.log("Output array : ");
+        console.log(output);
+    </script>
+</body>
+
+</html>
